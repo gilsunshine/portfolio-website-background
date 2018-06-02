@@ -41,9 +41,9 @@
 				scene.add( camera );
 				var light = new THREE.PointLight( 0xffffff, 0.8 );
 				camera.add( light );
-        // group = new THREE.Group();
-        // group.position.y = 50;
-        // scene.add( group );
+        group = new THREE.Group();
+        group.position.y = 50;
+        scene.add( group );
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
@@ -60,7 +60,7 @@
         var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
         var sphere = new THREE.Mesh( geometry, material );
         scene.add( sphere );
-        
+
         for(let i = 1; i < 11; i++){
           for (let j = 1; j < 11; j++){
             var material = new THREE.LineBasicMaterial({
